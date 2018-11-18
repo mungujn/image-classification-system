@@ -37,7 +37,7 @@ def startJob(job_type):
         job = r.json()
     elif job_type == 'classification':
         url = 'http://localhost:8080/classification-job'
-        r = requests.post(url, json={'classes': classes})
+        r = requests.post(url, json={'classes': classes}, headers=headers)
         job = r.json()
     elif job_type == 'upload':
         url = 'http://localhost:8081/upload-job'
@@ -84,7 +84,7 @@ def checkStatusOfJob(job_type):
 
 def download():
     """Download images"""
-    print('*************************************')
+    print('*'.center(20, '*'))
     print(f'Download of images has started')
     startJob('download')
     while not job['complete']:
@@ -96,7 +96,7 @@ def download():
 
 def classify():
     """Classify downloaded images"""
-    print('*************************************')
+    print('*'.center(20, '*'))
     print(f'Classification of {classes} has started')
     startJob('classification')
     while not job['complete']:
@@ -107,14 +107,14 @@ def classify():
 
 def upload():
     """Upload images"""
-    print('*************************************')
+    print('*'.center(20, '*'))
     print(f'Upload of {classes} has started')
     startJob('upload')
     while not job['complete']:
         checkStatusOfJob('upload')
         time.sleep(2)
     print(f'Upload of images has completed')
-    print('*************************************')
+    print('*'.center(20, '*'))
 
 
 if __name__ == '__main__':
@@ -134,9 +134,9 @@ if __name__ == '__main__':
             retry = False
         except Exception as error:
             print('\nThe following error has occured \n')
-            print('*************************************')
+            print('*'.center(20, '*'))
             print(error)
-            print('*************************************')
+            print('*'.center(20, '*'))
             retry = input('Do you want to retry? yes or no: ')
             if retry == 'yes' or retry == 'y':
                 retry = True

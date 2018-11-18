@@ -23,6 +23,8 @@ The [image-classifier](https://github.com/mungujn/image-classifier) and [downloa
    e.g 'python main.py --classes cat dog truck' will sort for cats, dogs and trucks
 9. The system will start the classification and update you on its progress along the way
 
+![System output](https://raw.githubusercontent.com/mungujn/image-classification-system/master/output.jpg 'System output')
+
 ## Testing
 
 Refer to the individual service repos. I have included each services' build status below;
