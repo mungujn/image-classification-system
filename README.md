@@ -20,7 +20,7 @@ To help understand the system consider this scenario: You have 1000 photos in a 
 
 The frontend described in this repo is a script that interacts with the two micro-services, serving to demonstrate usage of the system. It invokes the downloader-uploader first to dowload images from a dropbox folder called 'all'. It then invokes the image-classifier service to classify these images and move them to individual folders. Finally the frontend invokes the downloader-uploader service again to upload the classified images back up to seperate folders in dropbox.
 
-The [image-classifier](https://github.com/mungujn/image-classifier) and [downloader-uploader](https://github.com/mungujn/downloader-uploader) repos each have a READMEs that explain their design and functionality in more detail.
+The [image-classifier](https://github.com/mungujn/image-classifier) and [downloader-uploader](https://github.com/mungujn/downloader-uploader) repos each have  READMEs that explain their design and functionality in more detail.
 
 ## Running the system
 
