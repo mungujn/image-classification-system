@@ -36,4 +36,5 @@ The [image-classifier](https://github.com/mungujn/image-classifier) and [downloa
 9. The system will start the classification and update you on its progress along the way
 
 Script output
+
 ![Script output](https://raw.githubusercontent.com/mungujn/image-classification-system/master/output.jpg 'Script output')
